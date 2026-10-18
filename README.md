@@ -5,15 +5,15 @@
 A native macOS app launcher with fuzzy search. Requires macOS 12+ and Xcode Command Line Tools.
 
 ```sh
-brew install --HEAD aboredworm/tap/minilaunch
+brew install aboredworm/tap/minilaunch
 minilaunch --toggle
 ```
 
-MiniLaunch currently builds from the `main` branch. No prebuilt release is required. The app stays in the background after hiding it. Quit with `minilaunch --quit` before upgrading:
+MiniLaunch builds from the latest source release. No prebuilt app binary is required. Use `brew install --HEAD aboredworm/tap/minilaunch` to build the development branch instead. The app stays in the background after hiding it. Quit with `minilaunch --quit` before upgrading:
 
 ```sh
 minilaunch --quit
-brew upgrade --fetch-HEAD aboredworm/tap/minilaunch
+brew upgrade aboredworm/tap/minilaunch
 ```
 
 Bind `minilaunch --toggle` to a keyboard shortcut. If your shortcut manager does not load your shell's PATH, use the absolute path printed by `echo "$(brew --prefix)/bin/minilaunch"`.
@@ -24,7 +24,7 @@ In a `Brewfile`:
 
 ```ruby
 tap "aboredworm/tap"
-brew "minilaunch", args: ["HEAD"]
+brew "minilaunch"
 ```
 
 ## Documentation

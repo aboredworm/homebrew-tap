@@ -1,6 +1,8 @@
 class Minilaunch < Formula
   desc "Native macOS app launcher with fuzzy search"
   homepage "https://github.com/aboredworm/minilaunch"
+  url "https://github.com/aboredworm/minilaunch/releases/download/v0.1/minilaunch-0.1.tar.gz"
+  sha256 "3c75e582d371de0f3264d420433cb7e96fa9ec8682434283584f7c1799784122"
   head "https://github.com/aboredworm/minilaunch.git", branch: "main"
 
   depends_on macos: :monterey
