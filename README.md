@@ -1,16 +1,30 @@
 # Aboredworm Tap
 
-## How do I install these formulae?
+## MiniLaunch
 
-`brew install aboredworm/tap/<formula>`
+A native macOS app launcher with fuzzy search. Requires macOS 12+ and Xcode Command Line Tools.
 
-Or `brew tap aboredworm/tap` and then `brew install <formula>`.
+```sh
+brew install --HEAD aboredworm/tap/minilaunch
+minilaunch --toggle
+```
 
-Or, in a `brew bundle` `Brewfile`:
+MiniLaunch currently builds from the `main` branch. No prebuilt release is required. The app stays in the background after hiding it. Quit with `minilaunch --quit` before upgrading:
+
+```sh
+minilaunch --quit
+brew upgrade --fetch-HEAD aboredworm/tap/minilaunch
+```
+
+Bind `minilaunch --toggle` to a keyboard shortcut. If your shortcut manager does not load your shell's PATH, use the absolute path printed by `echo "$(brew --prefix)/bin/minilaunch"`.
+
+Configuration and usage: [MiniLaunch README](https://github.com/aboredworm/minilaunch#readme).
+
+In a `Brewfile`:
 
 ```ruby
 tap "aboredworm/tap"
-brew "<formula>"
+brew "minilaunch", args: ["HEAD"]
 ```
 
 ## Documentation
